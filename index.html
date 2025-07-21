@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>생물의 진화와 생물다양성</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생물의 진화와 생물다양성 인포그래픽</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <!-- Header -->
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-5xl font-black text-[#00487C] mb-4">생물의 진화와 생물다양성</h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">생명이 어떻게 변화하고, 이토록 다채로워졌는지 탐험하는 여정에 오신 것을 환영합니다.</p>
+        </header>
+
+        <!-- Section 1: Natural Selection -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#006BA6]">1. 진화의 엔진: 자연 선택</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">진화는 어떻게 일어날까요? 그 핵심 원리인 '자연 선택'은 마치 자연이 가장 잘 적응한 생물을 '선택'하는 과정과 같습니다. 기린의 목이 길어진 이야기를 통해 그 과정을 살펴봅시다.</p>
+            </div>
+
+            <!-- Natural Selection Flowchart -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-x-6 gap-y-8 items-start relative mb-16">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-[#4BB3FD] -translate-y-1/2"></div>
+                <div class="block md:hidden absolute left-1/2 top-0 h-full w-1 bg-[#4BB3FD] -translate-x-1/2"></div>
+                
+                <div class="text-center relative bg-slate-50 p-2 z-10">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-[#4BB3FD] text-white flex items-center justify-center text-3xl font-bold ring-8 ring-slate-50">1</div>
+                    <h3 class="mt-4 text-xl font-bold text-[#00487C]">과잉생산과 변이</h3>
+                    <p class="mt-2 text-slate-600">한정된 자원보다 많은 자손이 태어나며, 자손들은 목 길이처럼 조금씩 다른 특성(변이)을 가집니다.</p>
+                </div>
+                <div class="text-center relative bg-slate-50 p-2 z-10">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-[#4BB3FD] text-white flex items-center justify-center text-3xl font-bold ring-8 ring-slate-50">2</div>
+                    <h3 class="mt-4 text-xl font-bold text-[#00487C]">생존 경쟁</h3>
+                    <p class="mt-2 text-slate-600">먹이, 서식지를 두고 개체들 사이에 치열한 경쟁이 벌어집니다.</p>
+                </div>
+                <div class="text-center relative bg-slate-50 p-2 z-10">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-[#4BB3FD] text-white flex items-center justify-center text-3xl font-bold ring-8 ring-slate-50">3</div>
+                    <h3 class="mt-4 text-xl font-bold text-[#00487C]">적자생존</h3>
+                    <p class="mt-2 text-slate-600">긴 목처럼 생존에 유리한 변이를 가진 개체가 더 잘 살아남아 번식할 기회를 얻습니다.</p>
+                </div>
+                <div class="text-center relative bg-slate-50 p-2 z-10">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-[#4BB3FD] text-white flex items-center justify-center text-3xl font-bold ring-8 ring-slate-50">4</div>
+                    <h3 class="mt-4 text-xl font-bold text-[#00487C]">자연 선택</h3>
+                    <p class="mt-2 text-slate-600">유리한 형질이 자손에게 전달되는 과정이 반복되며, 집단 전체가 그 방향으로 진화합니다.</p>
+                </div>
+            </div>
+
+            <!-- Giraffe Population Chart -->
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 mt-12">
+                <h3 class="text-2xl font-bold text-center text-[#00487C] mb-2">자연 선택의 결과: 집단의 변화</h3>
+                <p class="text-center text-slate-500 mb-6 max-w-2xl mx-auto">자연 선택은 오랜 시간에 걸쳐 집단의 특성을 바꿉니다. 아래 차트는 기린 집단에서 목 길이 분포가 어떻게 변화하는지 보여줍니다.</p>
+                <div class="chart-container">
+                    <canvas id="giraffeChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Evidence -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#006BA6]">2. 진화의 흔적들: 증거를 찾아서</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">진화는 단순한 추측이 아닙니다. 지구 곳곳에 남겨진 다양한 흔적들은 생명이 걸어온 길을 증명하는 강력한 증거가 됩니다.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Fossil Card -->
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#00487C] mb-4">🦴 화석 증거</h3>
+                    <p class="text-slate-600 mb-4">과거 생물의 유해나 흔적은 생물 구조의 변화를 보여주는 '오래된 사진첩'과 같습니다. 말의 발가락 화석 변화는 육상 생활에 적응하며 진화했음을 보여줍니다.</p>
+                </div>
+                <!-- Anatomy Card -->
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#00487C] mb-4">💪 해부학적 증거</h3>
+                    <p class="text-slate-600 mb-4">사람의 팔과 고래의 지느러미는 기능이 다르지만 뼈 구조가 같습니다(상동 기관). 이는 공통 조상에서 유래했음을 시사하는 '같은 설계도'입니다.</p>
+                 <!-- Embryology Card -->
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#00487C] mb-4">🥚 발생학적 증거</h3>
+                    <p class="text-slate-600 mb-4">척추동물의 초기 배아 모습은 놀랍도록 비슷합니다. 이는 발생 과정에서 '어릴 적 닮은 모습'처럼 공통 조상의 흔적이 나타나는 것입니다.</p>
+                </div>
+                 <!-- Molecular Card -->
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#00487C] mb-4">🔬 분자생물학적 증거</h3>
+                    <p class="text-slate-600 mb-4">모든 생물은 DNA라는 유전 암호를 공유합니다. 사람과 침팬지의 DNA가 98% 이상 일치하는 것은 마치 '가족 DNA 검사'처럼 가까운 유연관계를 증명합니다.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 3: Biodiversity -->
+        <section class="mb-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#006BA6]">3. 진화의 산물: 생물다양성</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">오랜 진화의 결과, 지구에는 셀 수 없이 많은 생물이 함께 살아가게 되었습니다. 이 '생물다양성'은 우리 자신을 포함한 모든 생명에게 필수적인 '자연의 보물창고'입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                     <h3 class="text-2xl font-bold text-center text-[#00487C] mb-2">생물다양성의 세 가지 수준</h3>
+                     <p class="text-center text-slate-500 mb-6 max-w-2xl mx-auto">생물다양성은 유전적, 종, 생태계라는 세 가지 수준으로 이루어져 있으며, 이들은 서로 긴밀하게 연결되어 있습니다.</p>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="biodiversityChart"></canvas>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg shadow-xl p-6">
+                         <h4 class="text-xl font-bold text-[#00487C]">🧬 유전적 다양성</h4>
+                         <p class="mt-2 text-slate-600">같은 종 내 개체들의 유전적 차이. 높을수록 환경 변화나 질병에 대한 적응력이 강해집니다. (예: 다양한 무늬의 무당벌레)</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-xl p-6">
+                         <h4 class="text-xl font-bold text-[#00487C]">🦋 종 다양성</h4>
+                         <p class="mt-2 text-slate-600">특정 지역에 사는 생물 종의 다양성. 높을수록 먹이 그물이 복잡해져 생태계가 안정적으로 유지됩니다.</p>
+                    </div>
+                     <div class="bg-white rounded-lg shadow-xl p-6">
+                         <h4 class="text-xl font-bold text-[#00487C]">🏞️ 생태계 다양성</h4>
+                         <p class="mt-2 text-slate-600">숲, 강, 갯벌 등 한 지역에 존재하는 생태계의 다양성. 다양한 서식지를 제공하여 종 다양성을 높이는 기반이 됩니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
